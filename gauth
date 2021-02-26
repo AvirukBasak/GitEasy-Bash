@@ -1,0 +1,4 @@
+#!/bin/bash
+read -p "User: " usr
+read -p "Password: " pass
+echo "https://$usr:$pass@github.com/$usr" > ~/".gitauto"

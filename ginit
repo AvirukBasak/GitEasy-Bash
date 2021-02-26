@@ -1,0 +1,8 @@
+#!/bin/bash
+repo=$(basename "$PWD")
+out=$(git init)
+echo "${out:0:37}"
+url=$(cat ~/".gitauto")
+git remote add origin "$url/$repo.git" &> /dev/null
+git remote set-url origin "$url/$repo.git"
+git config pull.rebase false

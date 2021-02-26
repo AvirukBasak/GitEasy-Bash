@@ -1,0 +1,22 @@
+#!/bin/bash
+path=".git/.gitauto"
+echo "GIT: Staging..."
+git add -A
+echo "Staged all"
+read -p "Enter commit message: " com_msg
+echo "GIT: Commiting..."
+git commit -m "$com_msg"
+echo "\n" >> ./$path
+while IFS= read -r line
+do
+	if [[ "$line" == "branch:"* ]]
+	then
+		echo "GIT: Pushing..."
+		git push origin ${line:7}
+		exit
+	fi
+done < ./$path
+read -p "Branch: " branch
+echo "branch:$branch" >> ./$path
+echo "GIT: Pushing..."
+git push -u origin $branch
