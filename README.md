@@ -2,7 +2,7 @@
 A package of short bash scripts to automate git synchronisation.
 
 ## How to install?
-- Clone or [download zip](https://github.com/avirukbasak/GitAuto-Bash/archive/main.zip) and extract.
+- Clone or [download zip](https://github.com/avirukbasak/GitEasy-Bash/archive/main.zip) and extract.
 - Open up a terminal in that directory.
 - Execute `install.sh` (or `termux-install.sh`).
 - Note that root permission is needed to install (except termux).
