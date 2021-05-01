@@ -3,7 +3,7 @@ cd ~/GitHub
 url=$(cat ~/.gitauto)
 git clone "$url/$1"
 cd "$1"
-ginit 2> /dev/null
+
 repo=$(basename "$PWD")
 out=$(git init)
 echo "${out:0:37}"
