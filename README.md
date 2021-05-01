@@ -10,11 +10,13 @@ A package of short bash scripts to automate git synchronisation.
 
 ## In this pack
 - The pack contains 4 commands
-- In `gauth`, you enter your Git `username` and `password`. The values are stored in `~/.gitauto` without encryption. It's for one time use.
+- In `gauth`, you enter your Git `username`, email and `password`. The values are stored in `~/.gitauto` without encryption. It's for one time use.
+- `gauth` also adds `git global config for user and email`.
 - `ginit` initialises the repository and adds or edits a remote named `origin`. 
-- `gpull` pulls. It'll ask you for a branch during first pull.
-- `gpush` stages all, commits and pushes to origin. It'll ask you for a branch during first push.
-- In `<repository>/.git/.gitauto`, branch name entered in `gpull` or `gpush` is stored.
+- `gclone` clones from account entered in `gauth`.
+
+## WARNING
+Never share `~/.gitauto` with anyone as it contains your password in un-encrypted form.
 
 ## How to use?
 - Use `gauth` once after installation to write the string `https://user:password@githib.com/user` in `~/.gitauto`
@@ -22,9 +24,8 @@ A package of short bash scripts to automate git synchronisation.
 - Change to that directory.
 - Run `ginit`.
 - Once pulled and ready you can make changes.
-- Once your work is done, use `gpush`.
-- Enter branch if prompted.
-- It'll automatically set upstream to that branch.
+- Once your work is done, use `git push`.
+- Set up upstreap if asked.
 
 ## Contribute
  - Remember to comment lavishly in the `pull request` discussion page what changes you have made and why they were necessary when opening a `pull request`
