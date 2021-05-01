@@ -3,4 +3,4 @@ cd ~/GitHub
 url=$(cat ~/.gitauto)
 git clone "$url/$1"
 cd $1
-ginit
+ginit 2> /dev/null
