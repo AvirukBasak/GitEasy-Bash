@@ -3,6 +3,6 @@ repo=$(basename "$PWD")
 out=$(git init)
 echo "${out:0:37}"
 url=$(cat ~/.gitauto)
-out=$(git remote add origin "$url/$repo.git")
-out=$(git remote set-url origin "$url/$repo.git")
+out=$(git remote add origin "$url/$repo.git") 2> /dev/null
+out=$(git remote set-url origin "$url/$repo.git") 2> /dev/null
 git config pull.rebase false
