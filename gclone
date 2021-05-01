@@ -2,7 +2,7 @@
 cd ~/GitHub
 url=$(cat ~/.gitauto)
 git clone "$url/$1"
-cd "$1"
+cd ~/GitHub/"$1"
 
 repo=$(basename "$PWD")
 out=$(git init)
